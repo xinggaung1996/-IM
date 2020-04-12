@@ -1,0 +1,387 @@
+/* pages/room/room.wxss */
+page {
+  background-color: #f2f2f2;
+  height: 100%;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+ 
+swiper {
+  height: 180rpx;
+}
+ 
+swiper swiper-item .slide-image {
+  width: 100%;
+  height: 180rpx;
+}
+ 
+.jia_img {
+  height: 80rpx;
+  width: 90rpx;
+}
+ 
+.time {
+  text-align: center;
+  padding: 5rpx 20rpx 5rpx 20rpx;
+  border-radius: 10rpx;
+  display: block;
+  height: 38rpx;
+  line-height: 38rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  width: 90rpx;
+  color: white;
+  font-size: 26rpx;
+  background-color: #dedede;
+}
+ 
+.tab {
+  bottom: 120rpx;
+}
+ 
+.tab_1 {
+  position: fixed;
+  bottom: 50rpx;
+  width: 200rpx;
+  font-size: 26rpx;
+  left: 50%;
+  margin-left: -45rpx;
+  height: 100rpx;
+}
+ 
+.tab_2 {
+  right: 30rpx;
+  position: fixed;
+}
+ 
+/* 聊天 */
+ 
+.my_right {
+  float: right;
+  margin-top: 30rpx;
+  position: relative;
+}
+ 
+.my_audio {
+  height: 60rpx;
+  width: 60rpx;
+  z-index: 2;
+  position: relative;
+  top: 10rpx;
+  left: 20rpx;
+}
+ 
+.you_left {
+  margin-top: 30rpx;
+  float: left;
+  position: relative;
+  padding-left: 5rpx;
+}
+ 
+.new_img {
+  width: 85rpx;
+  height: 85rpx;
+  overflow: hidden;
+  position: absolute;
+  right: 30rpx;
+}
+ 
+.page_r {
+  float: right;
+}
+ 
+.new_txt {
+  min-width: 380rpx;
+  width: 460rpx;
+  word-break: break-all;
+}
+.pay_img{
+  max-width: 400rpx;
+}
+.new_txt_my {
+  border-radius: 7rpx;
+  background: #9fe75a;
+  position: relative;
+  right: 120rpx;
+  min-height: 50rpx;
+  padding: 17rpx 30rpx 17rpx 30rpx;
+  float: right;
+  border: 1px solid #d0d0d0;
+}
+ 
+.new_txt_my .arrow {
+  position: absolute;
+  z-index: 2;
+  width: 40rpx;
+  right: -38rpx;
+}
+ 
+.new_txt_my .arrow em {
+  position: absolute;
+  border-style: solid;
+  border-width: 15rpx;
+  border-color: transparent transparent transparent #d0d0d0;
+  top: 1rpx;
+}
+ 
+.new_txt_my .arrow span {
+  position: absolute;
+  top: 5rpx;
+  border-style: solid;
+  border-width: 15rpx;
+  border-color: transparent transparent transparent #9fe75a;
+}
+ 
+.new_txt_my_2 {
+  word-break: break-all;
+  border-radius: 7rpx;
+  background: #9fe75a;
+  min-width: 330rpx;
+  max-width: 530rpx;
+  padding: 17rpx 30rpx 17rpx 30rpx;
+  float: right;
+}
+ 
+.new_txt_ai {
+  max-width: 460rpx;
+  border-radius: 7rpx;
+  left: 20rpx;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #d0d0d0;
+  float: left;
+}
+ 
+.new_txt_ai .arrow {
+  position: relative;
+  width: 40rpx;
+  left: -30rpx;
+}
+ 
+.new_txt_ai .arrow em {
+  position: absolute;
+  border-style: solid;
+  border-width: 15rpx;
+  top: 20rpx;
+  border-color: transparent #d0d0d0 transparent transparent;
+}
+ 
+.new_txt_ai .arrow span {
+  position: absolute;
+  top: 20rpx;
+  border-style: solid;
+  border-width: 15rpx;
+  border-color: transparent #fff transparent transparent;
+  left: 2rpx;
+}
+ 
+.ai_content {
+  word-break: break-all;
+  padding: 17rpx 30rpx 17rpx 30rpx;
+  /* max-width:  */
+}
+ 
+.sanjiao {
+  top: 25rpx;
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-width: 15rpx;
+  border-style: solid;
+}
+ 
+.my {
+  border-color: transparent transparent transparent #9fe75a;
+}
+ 
+.you {
+  border-color: transparent #fff transparent transparent;
+}
+ 
+._span {
+  border-color: #fff transparent transparent;
+  top: -17px;
+}
+ 
+.is_ai_btn {
+  border-radius: 0 0 7px 7px;
+  border-top: 1px solid #d0d0d0;
+  background: white;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+ 
+.is_ai_btn view {
+  width: 50%;
+}
+ 
+.is_ai_btn image {
+  width: 32rpx;
+  position: relative;
+  top: 4rpx;
+  height: 32rpx;
+}
+ 
+.is_ai_btn .two {
+  border-left: 1px solid #d0d0d0;
+}
+ 
+.yes_problem_log {
+  border-top: 1px solid #d0d0d0;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+ 
+.voice_icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+}
+ 
+.add_icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  padding: 20rpx 10rpx 10rpx 15rpx;
+  /* transform: rotate(45deg); */
+}
+ 
+.voice_ing {
+  width: 90%;
+  height: 75rpx;
+  line-height: 85rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  border: 1px solid #d0d0d0;
+}
+ 
+.zezhao {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+ 
+.in_voice_icon {
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 500rpx;
+  background: #f8f8f8;
+}
+ 
+.in_voice_icon .item1 {
+  position: relative;
+  left: 20%;
+  margin-top: 180rpx;
+  text-align: center;
+  width: 120rpx;
+}
+.p_r{
+  display: flex;
+  flex-direction: row;
+}
+.video{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.in_voice_icon .item2 {
+  position: relative;
+  left: 50%;
+  margin-top: 180rpx;
+  text-align: center;
+  width: 120rpx;
+}
+ 
+.in_voice_icon .img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+ 
+.in_voice_icon .text {
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  background: white;
+  width: 200rpx;
+  margin-left: -40rpx;
+  border-radius: 15rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+ 
+.sendmessage {
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  background-color: #f8f8f8;
+  flex-direction: row;
+  height: 100rpx;
+}
+ 
+.sendmessage input {
+  width: 78%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  border-bottom: 1px solid #d0d0d0;
+  padding-left: 20rpx;
+}
+ 
+.sendmessage .user_input_text {
+  border: 1px solid white;
+  width: 130rpx;
+  height: 80rpx;
+  background: #0c0;
+  color: white;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+ 
+.hei {
+  height: 20rpx;
+}
+ 
+.history {
+  /* height: 73%; */
+  height: 88%;
+  display: flex;
+  font-size: 14px;
+  line-height: 50rpx;
+  position: relative;
+  top: 20rpx;
+}
+ 
+.icno_kf {
+  position: fixed;
+  bottom: 160rpx;
+  margin: 0 auto;
+  text-align: center;
+  left: 50%;
+  margin-left: -40rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}

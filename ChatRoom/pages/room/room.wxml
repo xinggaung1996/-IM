@@ -1,0 +1,79 @@
+<!--pages/room/room.wxml-->
+<!--doc_yl/test/test.wxml-->
+ 
+<!-- <button catchtap="sendv">发送视频通话</button> -->
+<view class="video" wx:if="{{vvvv}}">
+  <trtc-room id="trtcroom" config="{{trtcConfig}}"></trtc-room>
+</view>
+<block wx:if="{{!vvvv}}">
+  <scroll-view class="history" scroll-y="true" scroll-with-animation scroll-top="{{scrollTop}}">
+ 
+    <block wx:key="{{index}}" wx:for="{{messageList}}">
+      <block wx:if="{{item.from==im_id}}">
+        <view class='my_right new_txt' wx:if='{{item._elements[0].type=="TIMTextElem"||item._elements[0].type=="TIMImageElem"}}'>
+          <!-- <view class='time' wx:if='{{item.time}}'>
+          {{item.time}}
+        </view> -->
+          <view class='p_r page_r' style='margin-right: 25rpx;'>
+            <view class='new_txt'>
+              <view class='new_txt_my'>
+                <view class='arrow'>
+                  <em></em>
+                  <span></span>
+                </view>
+                <text wx:if='{{item._elements[0].type=="TIMTextElem"}}' decode="true">{{item.payload.text}}</text>
+                <image class="pay_img" mode="widthFix" wx:if='{{item._elements[0].type=="TIMImageElem"}}' src="{{item._elements[0].content.imageInfoArray[0].imageUrl}}"></image>
+              </view>
+            </view>
+            <view class='new_img'>
+              <open-data type="userAvatarUrl"></open-data>
+            </view>
+          </view>
+          <view class='p_r page_r' style='margin-right: 25rpx;' wx:if='{{item.audio}}' bindtap='my_audio_click' data-id='{{index}}'>
+            <view class='new_txt_my_2' style=' width:{{item.length}}px'>
+              <image class='my_audio' src='/images/yuyin_icon.png'></image>
+            </view>
+            <span class='_span'></span>
+            <open-data class='new_img' type="userAvatarUrl"></open-data>
+          </view>
+        </view>
+      </block>
+      <!-- <view class='you_left' id='id_{{allContentList.length}}'> -->
+      <block wx:if="{{item.from!=im_id}}">
+        <view class='you_left' wx:if='{{item._elements[0].type=="TIMTextElem"||item._elements[0].type=="TIMImageElem"}}' style='width:100%;' id='id_{{allContentList.length}}'>
+          <!-- <view class='time' wx:if='{{item.messageTime}}'>
+          {{item.messageTime}}
+        </view> -->
+          <view class='p_r' style='margin-left: 20rpx;'>
+            <image class='new_img' src='/img/xingx.png'></image>
+            <view class='new_txt'>
+              <view class='new_txt_ai'>
+                <view class='arrow'>
+                  <em></em>
+                  <span></span>
+                </view>
+                <!-- {{item.text}} -->
+                <view class='ai_content'>
+                  <text decode="true" wx:if='{{item._elements[0].type=="TIMTextElem"}}'>{{item.payload.text}}</text>
+                  <image class="pay_img" mode="widthFix" wx:if='{{item._elements[0].type=="TIMImageElem"}}' src="{{item._elements[0].content.imageInfoArray[0].imageUrl}}"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+  <!-- 遮罩 -->
+  <view class='zezhao' wx:if='{{cross}}' bindtap='add_icon_click' id='2'></view>
+  <!-- 输入框 -->
+  <view class='{{cross?"in_voice_icon":""}}'>
+    <view class="sendmessage" wx:if='{{!cross}}' style='bottom:{{input_bottom}}px'>
+      <input type="text" style='{{focus?"border-bottom: 1px solid #88DD4B;":""}}' adjust-position='{{false}}' cursor-spacing='5' bindinput="bindKeyInput" value='{{inputValue}}' focus='{{focus}}' bindblur='no_focus' bindfocus="focus" confirm-type="done" placeholder="请输入您要咨询的问题"
+      />
+      <view wx:if='{{if_send&&inputValue!=""}}' bindtap="sendMessage" class='user_input_text'>发送</view>
+      <image class='add_icon' bindtap='add_icon_click' id='1' wx:if='{{add&&!if_send&&inputValue==""}}' src='../img/add.png'></image>
+      <image class='add_icon' bindtap='add_icon_click' id='2' wx:if='{{cross}}' src='../img/add.png'></image>
+    </view>
+  </view>
+</block>
