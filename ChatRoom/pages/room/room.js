@@ -6,7 +6,7 @@ console.log(global)
 let that, pageImResponse;
 const sdkAppID = 1400346002;//AppID
 const EXPIRETIME = 604800;//签名有效期
-const SECRETKEY = `42ab8cf2d123ca3b9fc714992dd4c5eb6cc02e7d694b3acbd97b3bf0603fc18a`;// 密钥
+const SECRETKEY = ``;// 密钥
 let tim;
 Page({
   onLoad: function (options) {
