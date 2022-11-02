@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cos-wx-sdk-v5": "^0.7.10",
+    "cos-wx-sdk-v5": "^1.4.6",
     "tim-wx-sdk": "^2.6.0"
   }
 }
